@@ -8,7 +8,7 @@ import classes from "./Navigation.module.css";
 function Navigation() {
   return (
     <ul className={classes.Navigation}>
-      <NavigationItem to="/home">Accueil</NavigationItem>
+      <NavigationItem to="/">Accueil</NavigationItem>
       <NavigationItem to="/contact">Contact</NavigationItem>
       <NavigationItem to="/articles">Articles</NavigationItem>
     </ul>
