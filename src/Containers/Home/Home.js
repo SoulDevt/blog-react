@@ -1,16 +1,7 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-
 
 function Home() {
-    return(
-        <>
-            <h1>Hello from Home</h1>
-            <Link to="/contact" style={{marginRight: "10px"}}>Contact</Link>
-            <Link to="/articles">Articles</Link>
-        </>
-
-    );
-} 
+  return <h1>Hello from Home</h1>;
+}
 
 export default Home;

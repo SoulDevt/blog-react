@@ -1,13 +1,19 @@
 import React from "react";
 
-import Navigation from "./Navigation/Navigation"
+import Navigation from "./Navigation/Navigation";
 
-function Header(){
-    return(
-        <header>
-            <Navigation></Navigation>
-        </header>
-    )
-} 
+//Module css
+import classes from "./Header.module.css";
+
+function Header() {
+  return (
+    <header className={classes.Header}>
+      <div className={classes.logo}>BLOG</div>
+      <nav>
+        <Navigation></Navigation>
+      </nav>
+    </header>
+  );
+}
 
 export default Header;
