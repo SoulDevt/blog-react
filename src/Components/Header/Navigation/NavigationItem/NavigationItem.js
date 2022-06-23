@@ -4,12 +4,17 @@ import React from "react";
 import classes from "./NavigationItem.module.css";
 
 //Components
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function NavigationItem(props) {
   return (
     <li className={classes.NavigationItem}>
-      <Link to={props.to}>{props.children}</Link>
+      <NavLink
+        to={props.to}
+        className={({ isActive }) => (isActive ? classes.active : undefined)}
+      >
+        {props.children}
+      </NavLink>
     </li>
   );
 }
