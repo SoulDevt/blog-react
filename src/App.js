@@ -9,6 +9,8 @@ import Articles from "./Containers/Articles/Articles";
 import Contact from "./Components/Contact/Contact";
 import Article from "./Containers/Articles/Article/Article";
 import NotFound from "./Components/404/NotFound";
+import Email from "./Components/Contact/Email/Email";
+import Telephone from "./Components/Contact/Telephone/Telephone";
 
 function App() {
   return (
@@ -16,7 +18,10 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />}>
+            <Route path="/contact/email" element={<Email />} />
+            <Route path="/contact/telephone" element={<Telephone />} />
+          </Route>
           <Route path="/articles" element={<Articles />} />
           <Route path="/articles/:id" element={<Article />} />
           <Route path="*" element={<NotFound />} />

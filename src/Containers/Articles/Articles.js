@@ -6,7 +6,6 @@ function Articles(){
             <h1>Hello from Articles</h1>
 
         </>
-
     )
 } 
 
