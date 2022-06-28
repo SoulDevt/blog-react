@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom"
+import routes from "../../routes";
 
 function Home() {
   return (
   <>
     <h1>Hello from Home</h1>
     <Link to={{
-      pathname: "/articles/1",
+      pathname: routes.ARTICLES + "/1",
       // hash: "#project",
       search: "?order=new"
     }}

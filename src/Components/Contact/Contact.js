@@ -1,18 +1,20 @@
 import React from "react";
-import {useNavigate, Outlet } from "react-router-dom";
+import {useNavigate, useLocation, Outlet } from "react-router-dom";
 import classes from "./Contact.module.css"
 
 
 
 
 function Contact(){
-   const Navigate = useNavigate();
+   const navigate = useNavigate();
+   const location = useLocation();
+   console.log(location.pathname);
    const emailClickedHandler = () => {
-        Navigate("/contact/email");
+        navigate("email");
    }
 
    const callClickedHandler = () => {
-        Navigate("/contact/telephone");
+        navigate("telephone");
    }
     return(
         <>

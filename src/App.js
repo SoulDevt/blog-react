@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Layout from "./hoc/Layout/Layout";
+import routes from "./routes"
 
 //Components
 import { Routes, Route } from "react-router-dom";
@@ -18,12 +19,12 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />}>
-            <Route path="/contact/email" element={<Email />} />
-            <Route path="/contact/telephone" element={<Telephone />} />
+          <Route path={routes.CONTACT} element={<Contact />}>
+            <Route path="email" element={<Email />} />
+            <Route path="telephone" element={<Telephone />} />
           </Route>
-          <Route path="/articles" element={<Articles />} />
-          <Route path="/articles/:id" element={<Article />} />
+          <Route path={routes.ARTICLES} element={<Articles />} />
+          <Route path={routes.ARTICLES + "/:id"} element={<Article />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
