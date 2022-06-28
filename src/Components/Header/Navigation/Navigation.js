@@ -8,8 +8,8 @@ import classes from "./Navigation.module.css";
 function Navigation() {
   return (
     <ul className={classes.Navigation}>
-      <NavigationItem to="/">Accueil</NavigationItem>
-      <NavigationItem to="/contact">Contact</NavigationItem>
+      <NavigationItem  to="/">Accueil</NavigationItem>
+      <NavigationItem  to="/contact">Contact</NavigationItem>
       <NavigationItem to="/articles">Articles</NavigationItem>
     </ul>
   );

@@ -8,6 +8,7 @@ import Home from "./Containers/Home/Home";
 import Articles from "./Containers/Articles/Articles";
 import Contact from "./Components/Contact/Contact";
 import Article from "./Containers/Articles/Article/Article";
+import NotFound from "./Components/404/NotFound";
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/articles" element={<Articles />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/articles/1" element={<Article />} />
+          <Route path="/articles" element={<Articles />} />
+          <Route path="/articles/:id" element={<Article />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
     </div>
