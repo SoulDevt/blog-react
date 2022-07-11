@@ -12,6 +12,7 @@ import Article from "./Containers/Articles/Article/Article";
 import NotFound from "./Components/404/NotFound";
 import Email from "./Components/Contact/Email/Email";
 import Telephone from "./Components/Contact/Telephone/Telephone";
+import Ajouter from "./Containers/Ajouter/Ajouter";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           </Route>
           <Route path={routes.ARTICLES} element={<Articles />} />
           <Route path={routes.ARTICLES + "/:id"} element={<Article />} />
+          <Route path={routes.AJOUTER} element={<Ajouter />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
